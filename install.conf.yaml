@@ -7,3 +7,10 @@
     ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
     ~/.p10k.zsh: p10k.zsh
+
+- shell:
+    - [apt install zsh, Installing zsh]
+    - [chsh -s $(which zsh), Making zsh the default shell]
+    - [sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)", Installing oh-my-zsh]
+    - [git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k, Cloning powerlevel10k theme for zsh]
+    - echo "You should install the recommended powerlevel10k font from https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k !"
