@@ -7,3 +7,8 @@
     ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
     ~/.p10k.zsh: p10k.zsh
+    ~/.oh-my-zsh/custom/themes/powerlevel10k: powerlevel10k
+    ~/.dircolors: dircolors
+
+- shell:
+    - echo "You should install the recommended powerlevel10k font from https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k! "
