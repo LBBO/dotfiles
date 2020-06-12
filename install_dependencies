@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# Script must be executed as root because of package installations
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo Update submodules
