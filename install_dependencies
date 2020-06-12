@@ -21,8 +21,12 @@ echo Install oh-my-zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo
+echo Install nvm (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+echo
 echo Install nodejs
-apt-get install nodejs
+nvm use node
 
 echo
 echo Install diff-so-fancy
