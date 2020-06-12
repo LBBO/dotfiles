@@ -1,11 +1,19 @@
 - clean: ['~']
 
 - link:
-    ~/.profile: profile
-    ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
+    ~/.profile:
+        path: profile
+        force: true
+    ~/.bashrc:
+        path: bashrc
+        force: true
+    ~/.bash_logout:
+        path: bash_logout
+        force: true
     ~/.gitconfig: gitconfig
-    ~/.zshrc: zshrc
+    ~/.zshrc:
+        path: zshrc
+        force: true
     ~/.p10k.zsh: p10k.zsh
     ~/.oh-my-zsh/custom/themes/powerlevel10k: powerlevel10k
     ~/.dircolors: dircolors
