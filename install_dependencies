@@ -11,9 +11,19 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo Update submodules
 git submodule update --init --recursive
 
+echo
 echo Install zsh
 apt-get install zsh
 chsh -s $(which zsh)
 
+echo
 echo Install oh-my-zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo
+echo Install nodejs
+apt-get install nodejs
+
+echo
+echo Install diff-so-fancy
+npm i -g diff-so-fancy
