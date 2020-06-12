@@ -43,6 +43,8 @@ if ! command -v node > /dev/null; then
   echo Install nodejs
   nvm install node
   nvm use node
+  # Enable npm update checking
+  chown -R $USER:$(id -gn $USER) $HOME/.config
 else
   echo Nodejs already installed
 fi
