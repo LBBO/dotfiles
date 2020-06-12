@@ -11,6 +11,9 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo Update submodules
 git submodule update --init --recursive
 
+echo Install zsh
+sudo apt install curl
+
 echo
 if ! command -v zsh > /dev/null; then
   echo Install zsh
