@@ -12,7 +12,7 @@ echo Update submodules
 git submodule update --init --recursive
 
 echo
-if ![ hash zsh 2>/dev/null; ]; then
+if ! command -v zsh > /dev/null; then
   echo Install zsh
   apt-get install zsh
   chsh -s $(which zsh)
@@ -29,7 +29,7 @@ else
 fi
 
 echo
-if ! [ hash nvm 2>/dev/null; ]; then
+if ! command -v nvm > /dev/null; then
   echo "Install nvm (Node Version Manager)"
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
   export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -39,7 +39,7 @@ else
 fi
 
 echo
-if ! [ hash node 2>/dev/null; ]; then
+if ! command -v node > /dev/null; then
   echo Install nodejs
   nvm install node
   nvm use node
@@ -48,7 +48,7 @@ else
 fi
 
 echo
-if ! [ hash diff-so-fancy 2>/dev/null; ]; then
+if ! command -v diff-so-fancy > /dev/null; then
   echo
   echo Install diff-so-fancy
   npm i -g diff-so-fancy
