@@ -5,13 +5,13 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo Update submodules
 git submodule update --init --recursive
 
-echo Install zsh
-sudo apt install curl
+echo Install curl
+sudo apt install curl -y
 
 echo
 if ! command -v zsh > /dev/null; then
   echo Install zsh
-  sudo apt-get install zsh
+  sudo apt-get install zsh -y
   chsh -s $(which zsh)
 else
   echo Zsh already installed
@@ -26,7 +26,7 @@ else
 fi
 
 echo
-if ! command -v nvm > /dev/null; then
+if ! [ -d "$HOME/.nvm" ]; then
   echo "Install nvm (Node Version Manager)"
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
   export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
