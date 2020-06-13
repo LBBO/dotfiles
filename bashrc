@@ -119,3 +119,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Start ssh-agent and register keys so user doesn't have to enter
+# password at every ssh connection
+eval `ssh-agent`
+ssh-add

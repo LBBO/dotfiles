@@ -119,3 +119,8 @@ prompt_context(){}
 # This loads nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Start ssh-agent and register keys so user doesn't have to enter
+# password at every ssh connection
+eval `ssh-agent`
+ssh-add
