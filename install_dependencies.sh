@@ -1,20 +1,17 @@
 #!/usr/bin/env bash
 
-# Script must be executed as root because of package installations
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
-  exit
-fi
-
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo Update submodules
 git submodule update --init --recursive
 
+echo Install curl
+sudo apt install curl -y
+
 echo
 if ! command -v zsh > /dev/null; then
   echo Install zsh
-  apt-get install zsh
+  sudo apt-get install zsh -y
   chsh -s $(which zsh)
 else
   echo Zsh already installed
@@ -23,13 +20,13 @@ fi
 echo
 if ! [ -d "$HOME/.oh-my-zsh" ]; then
   echo Install oh-my-zsh
-  sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 else
   echo Oh-my-zsh already installed
 fi
 
 echo
-if ! command -v nvm > /dev/null; then
+if ! [ -d "$HOME/.nvm" ]; then
   echo "Install nvm (Node Version Manager)"
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
   export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -58,3 +55,19 @@ else
   echo Diff-so-fancy already installed
 fi
 
+echo
+if ! command -v code > /dev/null; then
+  echo Install VS code
+
+  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+  sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+  sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+
+  sudo apt-get install apt-transport-https
+  sudo apt-get update
+  sudo apt-get install code # or code-insiders
+
+  rm packages.microsoft.gpg
+else
+  echo VS Code already installed
+fi
