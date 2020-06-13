@@ -56,7 +56,8 @@ else
 fi
 
 echo
-if ! command -v code > /dev/null; then
+# Only install VS code if not installed yet and not WSL
+if ! command -v code > /dev/null && ! grep -q Microsoft /proc/version > /dev/null; then
   echo Install VS code
 
   curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
