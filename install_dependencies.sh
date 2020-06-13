@@ -17,7 +17,7 @@ sudo apt install curl
 echo
 if ! command -v zsh > /dev/null; then
   echo Install zsh
-  apt-get install zsh
+  sudo apt-get install zsh
   chsh -s $(which zsh)
 else
   echo Zsh already installed
@@ -26,7 +26,7 @@ fi
 echo
 if ! [ -d "$HOME/.oh-my-zsh" ]; then
   echo Install oh-my-zsh
-  sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 else
   echo Oh-my-zsh already installed
 fi
