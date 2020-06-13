@@ -1,4 +1,5 @@
 {
+    "telemetry.enableTelemetry": false,
     "files.autoSave": "onFocusChange",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "java.errors.incompleteClasspath.severity": "ignore",
@@ -17,7 +18,6 @@
     "breadcrumbs.enabled": false,
     "jest.showCoverageOnLoad": true,
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
-    "terminal.integrated.fontFamily": "DejaVu Sans Mono for Powerline",
     "window.zoomLevel": 0,
     "terminal.integrated.rendererType": "dom",
     "search.exclude": {
@@ -34,5 +34,6 @@
     "workbench.editor.showTabs": false,
     "screencastMode.onlyKeyboardShortcuts": true,
     "workbench.editor.limit.enabled": true,
-    "liveshare.featureSet": "insiders"
+    "liveshare.featureSet": "insiders",
+    "terminal.integrated.fontFamily": "'MesloLGS NF'"
 }
