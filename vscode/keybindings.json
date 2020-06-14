@@ -2,7 +2,7 @@
 [
     {
         "key": "ctrl+n",
-        "command": "-workbench.action.showAllSymbols"
+        "command": "workbench.action.showAllSymbols"
     },
     {
         "key": "ctrl+f1",
@@ -11,12 +11,12 @@
     },
     {
         "key": "ctrl+p",
-        "command": "-editor.action.triggerParameterHints",
+        "command": "editor.action.triggerParameterHints",
         "when": "editorHasSignatureHelpProvider && editorTextFocus"
     },
     {
         "key": "alt+left",
-        "command": "-workbench.action.previousEditor"
+        "command": "workbench.action.previousEditor"
     },
     {
         "key": "ctrl+alt+t",
@@ -25,12 +25,12 @@
     },
     {
         "key": "ctrl+shift+t",
-        "command": "-surround.with",
+        "command": "surround.with",
         "when": "editorHasSelection"
     },
     {
         "key": "alt+right",
-        "command": "-workbench.action.nextEditor"
+        "command": "workbench.action.nextEditor"
     },
     {
         "key": "ctrl+f11",
@@ -38,6 +38,6 @@
     },
     {
         "key": "ctrl+shift+n",
-        "command": "-workbench.action.quickOpen"
+        "command": "workbench.action.quickOpen"
     }
 ]

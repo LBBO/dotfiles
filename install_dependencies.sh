@@ -72,3 +72,9 @@ if ! command -v code > /dev/null && ! grep -q Microsoft /proc/version > /dev/nul
 else
   echo VS Code already installed
 fi
+
+# Install VS Code extensions
+cat $BASEDIR/vscode/extensions.txt | while read extension || [[ -n $extension ]];
+do
+  code --install-extension $extension
+done
