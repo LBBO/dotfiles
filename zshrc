@@ -122,5 +122,5 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # Start ssh-agent and register keys so user doesn't have to enter
 # password at every ssh connection
-eval `ssh-agent`
+eval `ssh-agent` > /dev/null
 ssh-add
