@@ -17,3 +17,6 @@
 	whitespace = red reverse
 [alias]
 	gl = log --graph --oneline
+[user]
+	name = Michael Kuckuk
+	email = mdk@kuckuk.com
