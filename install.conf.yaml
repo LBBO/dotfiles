@@ -11,6 +11,7 @@
         path: bash_logout
         force: true
     ~/.gitconfig: gitconfig
+    ~/.vimrc: vimrc
     ~/.zshrc:
         path: zshrc
         force: true
