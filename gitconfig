@@ -20,3 +20,5 @@
 [user]
 	name = Michael Kuckuk
 	email = mdk@kuckuk.com
+[init]
+	defaultBranch = main
