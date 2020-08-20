@@ -91,6 +91,7 @@ echo install deno
 if ! command -v deno > /dev/null; then
   echo Install deno
   curl -fsSL https://deno.land/x/install/install.sh | sh
+  sudo ln -s ~/.deno/bin/deno /usr/local/bin/deno
 else
   echo Deno already installed
 fi
