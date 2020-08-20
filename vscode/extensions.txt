@@ -2,6 +2,7 @@ af4jm.vscode-m3u
 andys8.jest-snippets
 Angular.ng-template
 dbaeumer.vscode-eslint
+denoland.vscode-deno
 donjayamanne.githistory
 eamodio.gitlens
 eg2.tslint
