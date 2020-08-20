@@ -83,3 +83,14 @@ cat $BASEDIR/vscode/extensions.txt | while read extension || [[ -n $extension ]]
 do
   code --install-extension $extension
 done
+
+echo Install unzip
+sudo apt install unzip -y
+
+echo install deno
+if ! command -v deno > /dev/null; then
+  echo Install deno
+  curl -fsSL https://deno.land/x/install/install.sh | sh
+else
+  echo Deno already installed
+fi
