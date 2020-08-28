@@ -109,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cache-ssh='eval `ssh-agent`; ssh-add'
+
 # Remove all branches without uplink
 alias git-remove-unused="git branch -vv | grep ': gone]' | awk '{print \$1}' >/tmp/merged-branches && nano /tmp/merged-branches && xargs git branch -d </tmp/merged-branches"
 
