@@ -57,7 +57,7 @@ fi
 
 echo
 # Only install VS code if not installed yet and not WSL
-if ! command -v code > /dev/null && ! grep -q Microsoft /proc/version > /dev/null; then
+if ! command -v code > /dev/null && ! grep -qi Microsoft /proc/version > /dev/null; then
   if command -v snap > /dev/null; then
     echo Install VS code using snap
     sudo snap install code --classic
