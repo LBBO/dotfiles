@@ -1,11 +1,13 @@
+# cd into C:\Users in case starting directory is located in WSL distro, because CMD doesn't support WSL
+# dirs as starting dirs
+export WINDOWS_USERNAME=$(cd /mnt/c/Users/ && /mnt/c/Windows/System32/cmd.exe  /c 'echo %USERNAME%' | sed -e 's/\r//g')
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-export WINDOWS_USERNAME=$(/mnt/c/Windows/System32/cmd.exe /c 'echo %USERNAME%' | sed -e 's/\r//g')
 
 export DENO_INSTALL="/home/mdk/.deno"
 
@@ -129,4 +131,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # Start ssh-agent and register keys so user doesn't have to enter
 # password at every ssh connection
 eval `ssh-agent` > /dev/null
-ssh-add
+# ssh-add
