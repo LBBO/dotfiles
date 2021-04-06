@@ -22,7 +22,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Use oh-my-posh for themeing
+eval "$(oh-my-posh --init --shell zsh --config ~/git-clones/dotfiles/oh-my-posh/slim_based_theme.omp.json)"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -114,6 +117,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Remove all branches without uplink
 alias git-remove-unused="git branch -vv | grep ': gone]' | awk '{print \$1}' >/tmp/merged-branches && nano /tmp/merged-branches && xargs git branch -d </tmp/merged-branches"
+alias fucking="sudo"
 
 ## set colors for LS_COLORS
 eval `dircolors ~/.dircolors`
