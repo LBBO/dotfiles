@@ -13,8 +13,8 @@
           "type": "os",
           "style": "diamond",
           "leading_diamond": "\ue0c7\u2593",
-          "foreground": "#26C6DA",
-          "background": "#2f2f2f",
+          "foreground": "#2f2f2f",
+          "background": "#CCCCCC",
           "properties": {
             "alpine": "\uf300",
             "arch": "\uf303",
@@ -32,50 +32,61 @@
             "ubuntu": "\uf31c",
             "wsl": "\ue712",
             "wsl_separator": " on ",
-            "windows": "\ue70f",
-            "postfix": "<#7a7a7a> \ue0b1</>"
+            "windows": "\ue70f"
+          }
+        },
+        {
+          "type": "text",
+          "style": "powerline",
+          "foreground": "#CCCCCC",
+          "background": "#CCCCCC",
+          "properties": {
+            "text": "",
+            "postfix": "",
+            "prefix": ""
           }
         },
         {
           "type": "session",
-          "style": "diamond",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
           "foreground": "#fafafa",
           "background": "#2f2f2f",
           "properties": {
             "user_info_separator": "<#7a7a7a>\uf1fa</>",
             "display_default": false,
             "user_color": "#77f5d6",
-            "host_color": "#2EEFBF",
-            "postfix": "<#7a7a7a> \ue0b1</>"
+            "host_color": "#2EEFBF"
           }
         },
         {
           "type": "root",
-          "style": "diamond",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
           "foreground": "#ffff66",
           "background": "#2f2f2f",
           "properties": {
-            "root_icon": "\uF0E7",
-            "postfix": "<#7a7a7a> \ue0b1</>"
+            "root_icon": "\uF0E7"
           }
         },
         {
           "type": "path",
-          "style": "diamond",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
           "foreground": "#fafafa",
-          "background": "#2f2f2f",
+          "background": "#0037DA",
           "properties": {
             "prefix": "<#f2f200> \ue5ff </>",
             "style": "agnoster_short",
             "enable_hyperlink": true,
-            "home_icon": "\uf015",
-            "folder_icon": "<#B5B2C2>\ue5fe </>",
-            "folder_separator_icon": "<#B5B2C2>\ue0bf </>"
+            "home_icon": "\uf015 ",
+            "folder_icon": " <#B5B2C2>\ue5fe </>"
           }
         },
         {
           "type": "git",
-          "style": "diamond",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
           "foreground": "#ffeb3b",
           "background": "#2f2f2f",
           "properties": {
@@ -88,14 +99,12 @@
             "working_color": "#E84855",
             "staging_color": "#2FDA4E",
             "ahead_color": "#2EC4B6",
-            "behind_color": "#8A4FFF",
-            "prefix": "<#7a7a7a>\ue0b1 </>"
+            "behind_color": "#8A4FFF"
           }
         },
         {
           "type": "text",
           "style": "diamond",
-          "trailing_diamond": "\ue0b0",
           "foreground": "#fafafa",
           "background": "#2f2f2f",
           "properties": {
