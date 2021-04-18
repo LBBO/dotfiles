@@ -25,7 +25,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Use oh-my-posh for themeing
-eval "$(oh-my-posh --init --shell zsh --config ~/git-clones/dotfiles/oh-my-posh/slim_based_theme.omp.json)"
+eval "$(oh-my-posh --init --shell zsh --config ~/.oh-my-posh-theme.omp.json)"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

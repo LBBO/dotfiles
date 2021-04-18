@@ -19,6 +19,7 @@
     ~/.oh-my-zsh/custom/themes/powerlevel10k: powerlevel10k
     ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: zsh-autosuggestions
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: zsh-syntax-highlighting
+    ~/.oh-my-posh-theme.omp.json: oh-my-posh/slim_based_theme.omp.json
     ~/.dircolors: dircolors
     ~/.config/Code/User/settings.json: vscode/settings.json
     ~/.config/Code/User/keybindings.json: vscode/keybindings.json
