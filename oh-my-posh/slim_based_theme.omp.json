@@ -63,8 +63,7 @@
           "foreground": "#fafafa",
           "background": "#0037DA",
           "properties": {
-            "prefix": "<#f2f200> \ue5ff </>",
-            "style": "agnoster_short",
+            "style": "agnoster_full",
             "enable_hyperlink": true,
             "home_icon": "\uf015 ",
             "folder_icon": " <#B5B2C2>\ue5fe </>"
@@ -230,4 +229,3 @@
     }
   ]
 }
-
