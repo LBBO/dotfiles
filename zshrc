@@ -1,7 +1,3 @@
-# cd into C:\Users in case starting directory is located in WSL distro, because CMD doesn't support WSL
-# dirs as starting dirs
-export WINDOWS_USERNAME=$(cd /mnt/c/Users/ && /mnt/c/Windows/System32/cmd.exe  /c 'echo %USERNAME%' | sed -e 's/\r//g')
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -13,7 +9,16 @@ export DENO_INSTALL="$HOME/.deno"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/usr/games:/usr/local/games:/mnt/c/Users/$WINDOWS_USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code/bin:/mnt/c/Windows:/mnt/c/Windows/System32:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:$DENO_INSTALL/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/usr/games:/usr/local/games:$DENO_INSTALL/bin:$PATH
+
+# Windows paths
+if grep -qi Microsoft /proc/version > /dev/null; then
+  # cd into C:\Users in case starting directory is located in WSL distro, because CMD doesn't support WSL
+  # dirs as starting dirs
+  export WINDOWS_USERNAME=$(cd /mnt/c/Users/ && /mnt/c/Windows/System32/cmd.exe  /c 'echo %USERNAME%' | sed -e 's/\r//g')
+  export PATH=/mnt/c/Users/$WINDOWS_USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code/bin:/mnt/c/Windows:$PATH
+  export PATH=/mnt/c/Windows/System32:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:$PATH
+fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
