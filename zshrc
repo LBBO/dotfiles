@@ -1,6 +1,6 @@
 # cd into C:\Users in case starting directory is located in WSL distro, because CMD doesn't support WSL
 # dirs as starting dirs
-export WINDOWS_USERNAME=$(cd /mnt/c/Users/ && /mnt/c/Windows/System32/cmd.exe  /c 'echo %USERNAME%' | sed -e 's/\r//g')
+# export WINDOWS_USERNAME=$(cd /mnt/c/Users/ && /mnt/c/Windows/System32/cmd.exe  /c 'echo %USERNAME%' | sed -e 's/\r//g')
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -9,11 +9,21 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export DENO_INSTALL="/home/mdk/.deno"
+export DENO_INSTALL="~/.deno"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/usr/games:/usr/local/games:/mnt/c/Users/$WINDOWS_USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code/bin:/mnt/c/Windows:/mnt/c/Windows/System32:$DENO_INSTALL/bin
+export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH
+
+# Ubuntu PATH
+# export PATH=/snap/bin:$PATH
+
+# macOS PATH
+export PATH=/opt/homebrew/bin:$PATH
+
+
+# Windows PATH
+# export PATH=/mnt/c/Users/$WINDOWS_USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code/bin:/mnt/c/Windows:/mnt/c/Windows/System32:$DENO_INSTALL/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -120,7 +130,7 @@ alias git-remove-unused="git branch -vv | grep ': gone]' | awk '{print \$1}' >/t
 alias fucking="sudo"
 
 ## set colors for LS_COLORS
-eval `dircolors ~/.dircolors`
+# eval `dircolors ~/.dircolors`
 
 # Hide the "user@hostname" at beginning of line
 prompt_context(){}
