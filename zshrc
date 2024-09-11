@@ -15,15 +15,17 @@ export DENO_INSTALL="~/.deno"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH
 
-# Ubuntu PATH
-# export PATH=/snap/bin:$PATH
-
 # macOS PATH
 export PATH=/opt/homebrew/bin:$PATH
 
-
-# Windows PATH
-# export PATH=/mnt/c/Users/$WINDOWS_USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code/bin:/mnt/c/Windows:/mnt/c/Windows/System32:$DENO_INSTALL/bin
+# Windows paths
+if grep -qi Microsoft /proc/version > /dev/null; then
+  # cd into C:\Users in case starting directory is located in WSL distro, because CMD doesn't support WSL
+  # dirs as starting dirs
+  export WINDOWS_USERNAME=$(cd /mnt/c/Users/ && /mnt/c/Windows/System32/cmd.exe  /c 'echo %USERNAME%' | sed -e 's/\r//g')
+  export PATH=/mnt/c/Users/$WINDOWS_USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code/bin:/mnt/c/Windows:$PATH
+  export PATH=/mnt/c/Windows/System32:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:$PATH
+fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
