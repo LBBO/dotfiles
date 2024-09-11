@@ -158,3 +158,8 @@ export NVM_DIR="$HOME/.nvm"
 # password at every ssh connection
 # eval `ssh-agent` > /dev/null
 # ssh-add
+
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+
+# opam configuration
+[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
