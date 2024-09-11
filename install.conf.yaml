@@ -12,6 +12,7 @@
     #     force: true
     ~/.gitconfig: gitconfig
     ~/.vimrc: vimrc
+    ~/.ideavimrc: ideavimrc
     ~/.config/nvim: nvim
     ~/.config/zed/settings.json:
       path: zed/settings.json
