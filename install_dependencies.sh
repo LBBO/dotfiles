@@ -26,6 +26,16 @@ else
 fi
 
 echo
+# If file doesn't exist
+if ! [ -f "/usr/local/bin/oh-my-posh" ]; then
+  echo Install oh-my-posh
+  sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
+  sudo chmod +x /usr/local/bin/oh-my-posh
+else
+  echo Oh-my-zsh already installed
+fi
+
+echo
 if ! [ -d "$HOME/.nvm" ]; then
   echo "Install nvm (Node Version Manager)"
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
