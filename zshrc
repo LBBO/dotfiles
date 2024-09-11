@@ -20,13 +20,13 @@ export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 export PATH=/opt/homebrew/bin:$PATH
 
 # Windows paths
-if grep -qi Microsoft /proc/version > /dev/null; then
-  # cd into C:\Users in case starting directory is located in WSL distro, because CMD doesn't support WSL
-  # dirs as starting dirs
-  export WINDOWS_USERNAME=$(cd /mnt/c/Users/ && /mnt/c/Windows/System32/cmd.exe  /c 'echo %USERNAME%' | sed -e 's/\r//g')
-  export PATH=/mnt/c/Users/$WINDOWS_USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code/bin:/mnt/c/Windows:$PATH
-  export PATH=/mnt/c/Windows/System32:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:$PATH
-fi
+# if grep -qi Microsoft /proc/version > /dev/null; then
+#   # cd into C:\Users in case starting directory is located in WSL distro, because CMD doesn't support WSL
+#   # dirs as starting dirs
+#   export WINDOWS_USERNAME=$(cd /mnt/c/Users/ && /mnt/c/Windows/System32/cmd.exe  /c 'echo %USERNAME%' | sed -e 's/\r//g')
+#   export PATH=/mnt/c/Users/$WINDOWS_USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code/bin:/mnt/c/Windows:$PATH
+#   export PATH=/mnt/c/Windows/System32:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:$PATH
+# fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -144,12 +144,17 @@ prompt_context(){}
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# This loads nvm
+# Linux
+# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
+# macOS
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Start ssh-agent and register keys so user doesn't have to enter
 # password at every ssh connection
-eval `ssh-agent` > /dev/null
+# eval `ssh-agent` > /dev/null
 # ssh-add
