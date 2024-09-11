@@ -1,29 +1,33 @@
-- clean: ['~']
+- clean: ["~"]
 
 - link:
-    ~/.profile:
-        path: profile
-        force: true
-    ~/.bashrc:
-        path: bashrc
-        force: true
-    ~/.bash_logout:
-        path: bash_logout
-        force: true
+    # ~/.profile:
+    #     path: profile
+    #     force: true
+    # ~/.bashrc:
+    #     path: bashrc
+    #     force: true
+    # ~/.bash_logout:
+    #     path: bash_logout
+    #     force: true
     ~/.gitconfig: gitconfig
     ~/.vimrc: vimrc
     ~/.config/nvim: nvim
+    ~/.config/zed/settings.json:
+      path: zed/settings.json
+      force: true
+      create: true
     ~/.zshrc:
-        path: zshrc
-        force: true
+      path: zshrc
+      force: true
     ~/.p10k.zsh: p10k.zsh
     ~/.oh-my-zsh/custom/themes/powerlevel10k: powerlevel10k
     ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: zsh-autosuggestions
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: zsh-syntax-highlighting
     ~/.oh-my-posh-theme.omp.json: oh-my-posh/slim_based_theme.omp.json
     ~/.dircolors: dircolors
-    ~/.config/Code/User/settings.json: vscode/settings.json
-    ~/.config/Code/User/keybindings.json: vscode/keybindings.json
+    # ~/.config/Code/User/settings.json: vscode/settings.json
+    # ~/.config/Code/User/keybindings.json: vscode/keybindings.json
 
 - shell:
     - echo "You should install the recommended powerlevel10k font from https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k! "

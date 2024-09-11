@@ -1,0 +1,39 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `zed: Open Default Settings` command
+// from the command palette
+{
+  "base_keymap": "JetBrains",
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "autosave": "on_focus_change",
+  "inlay_hints": {
+    "enabled": true
+  },
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "classAttributes": ["class", "className", "ngClass", "styles"]
+      }
+    }
+  },
+  "tab_bar": {
+    // TODO: Set to true once tab limit is possible
+    // https://github.com/zed-industries/zed/issues/4784
+    // "show": false,
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "terminal": {
+    "font_family": "MesloLGS NF"
+  }
+}
