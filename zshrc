@@ -134,6 +134,7 @@ source $ZSH/oh-my-zsh.sh
 # Remove all branches without uplink
 alias git-remove-unused="git branch -vv | grep ': gone]' | awk '{print \$1}' >/tmp/merged-branches && nano /tmp/merged-branches && xargs git branch -d </tmp/merged-branches"
 alias fucking="sudo"
+alias cat="bat"
 
 ## set colors for LS_COLORS
 # eval `dircolors ~/.dircolors`
