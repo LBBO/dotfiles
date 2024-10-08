@@ -23,3 +23,6 @@ xmap <leader>g<C-n> <Plug>AllOccurrences
 
 :map [x <Action>(EditorSelectWord)
 :map ]x <Action>(EditorUnSelectWord)
+
+nnoremap g] :action GotoNextError<CR>
+nnoremap g[ :action GotoPreviousError<CR>
