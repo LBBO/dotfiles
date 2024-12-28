@@ -1,6 +1,6 @@
 theme = Bright Lights
-# unfocused-split-fill = #000000
 unfocused-split-opacity = 0.4
 selection-invert-fg-bg = true
+mouse-hide-while-typing = true
 quit-after-last-window-closed = true
 quit-after-last-window-closed-delay = 1m
