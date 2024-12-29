@@ -102,13 +102,39 @@ eval "$(oh-my-posh --init --shell zsh --config ~/.oh-my-posh-theme.omp.json)"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    bun
+    brew
+    cabal # Haskell
+    deno
+    docker
+    docker-compose
+    fzf-tab
     git
+    golang
+    helm
+    kubectl
+    npm
+    nvm
+    stack # Haskell
+    yarn
     zsh-autocomplete
     zsh-autosuggestions
     zsh-syntax-highlighting
+    zsh-vim-mode
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# fzf-tab config
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+# NOTE: don't use escape sequences (like '%F{red}%d%f') here, fzf-tab will ignore them
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
+zstyle ':completion:*' menu no
 
 # User configuration
 
@@ -169,3 +195,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # opam configuration
 [[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+# Shell integrations
+eval "$(fzf --zsh)"
+
+# Enable vim mode
+bindkey -v
