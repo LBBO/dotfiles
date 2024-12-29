@@ -9,6 +9,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export EDITOR=nvim
+
 export DENO_INSTALL="~/.deno"
 export GOPATH=$HOME/go
 
@@ -201,3 +203,8 @@ eval "$(fzf --zsh)"
 
 # Enable vim mode
 bindkey -v
+# Otherwise escape won't take effect for quite a while
+export KEYTIMEOUT=1
+# Edit line in vim with ctrl-e:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
