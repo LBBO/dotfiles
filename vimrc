@@ -27,9 +27,6 @@ set notimeout
 set incsearch
 
 """ Mappings --------------------------------
-inoremap jk <ESC>
-inoremap kj <ESC>
-
 map <leader>f <Plug>(easymotion-s)
 map <leader>e <Plug>(easymotion-f)
 
