@@ -104,8 +104,8 @@ eval "$(oh-my-posh --init --shell zsh --config ~/.oh-my-posh-theme.omp.json)"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    bun
     brew
+    bun
     cabal # Haskell
     deno
     docker
@@ -115,6 +115,7 @@ plugins=(
     golang
     helm
     kubectl
+    macos
     npm
     nvm
     stack # Haskell
