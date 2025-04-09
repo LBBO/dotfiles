@@ -19,3 +19,6 @@
 [submodule "fzf-tab"]
 	path = fzf-tab
 	url = git@github.com:Aloxaf/fzf-tab.git
+[submodule "auto-notify"]
+	path = auto-notify
+	url = https://github.com/MichaelAquilina/zsh-auto-notify.git

@@ -25,6 +25,7 @@
     ~/.p10k.zsh: p10k.zsh
     ~/.oh-my-zsh/custom/themes/powerlevel10k: powerlevel10k
     ~/.oh-my-zsh/custom/plugins/fzf-tab: fzf-tab
+    ~/.oh-my-zsh/custom/plugins/auto-notify: auto-notify
     ~/.oh-my-zsh/custom/plugins/zsh-autocomplete: zsh-autocomplete
     ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: zsh-autosuggestions
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: zsh-syntax-highlighting
