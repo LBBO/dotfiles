@@ -141,6 +141,13 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
 
 # User configuration
+# Don't send notifications when these commands finish after taking longer
+AUTO_NOTIFY_IGNORE+=(
+    # git add --patch
+    "gapa"
+    # git log ...
+    "glod"
+)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
