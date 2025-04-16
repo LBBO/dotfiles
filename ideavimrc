@@ -26,3 +26,8 @@ xmap <leader>g<C-n> <Plug>AllOccurrences
 
 nnoremap g] :action GotoNextError<CR>
 nnoremap g[ :action GotoPreviousError<CR>
+
+if &ide =~? 'pycharm'
+    " PyCharm specific mappings and options
+    set scrolloff=0
+endif
