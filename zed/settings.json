@@ -7,7 +7,7 @@
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
 {
-  "show_inline_completions": true,
+  "show_edit_predictions": true,
   "base_keymap": "JetBrains",
   "vim_mode": true,
   "relative_line_numbers": true,
@@ -25,8 +25,9 @@
   "tab_bar": {
     // TODO: Set to true once tab limit is possible
     // https://github.com/zed-industries/zed/issues/4784
-    // "show": false,
+    "show": false
   },
+  "max_tabs": 1,
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "theme": {
