@@ -23,8 +23,6 @@
     }
   },
   "tab_bar": {
-    // TODO: Set to true once tab limit is possible
-    // https://github.com/zed-industries/zed/issues/4784
     "show": false
   },
   "max_tabs": 1,
