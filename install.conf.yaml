@@ -30,7 +30,7 @@
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: zsh-syntax-highlighting
     ~/.oh-my-zsh/custom/plugins/zsh-vim-mode: zsh-vim-mode
     ~/.oh-my-posh-theme.omp.json: oh-my-posh/slim_based_theme.omp.json
-    ~/.tmux.config: tmux.config
+    ~/.tmux.conf: tmux.conf
     ~/.dircolors: dircolors
     # ~/.config/Code/User/settings.json: vscode/settings.json
     # ~/.config/Code/User/keybindings.json: vscode/keybindings.json
