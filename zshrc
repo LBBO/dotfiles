@@ -117,6 +117,7 @@ plugins=(
     helm
     kubectl
     macos
+    mise
     npm
     nvm
     stack # Haskell
