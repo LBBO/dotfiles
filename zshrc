@@ -117,7 +117,6 @@ plugins=(
     helm
     kubectl
     macos
-    mise
     npm
     nvm
     stack # Haskell
@@ -126,6 +125,8 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-vim-mode
+    # Mise should come last so that its PATH takes precedence over e.g. nvm
+    mise
 )
 
 zstyle ':omz:plugins:nvm' autoload yes
