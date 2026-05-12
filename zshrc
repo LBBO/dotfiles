@@ -118,6 +118,7 @@ plugins=(
     macos
     npm
     nvm
+    podman
     stack # Haskell
     yarn
     zsh-autocomplete
