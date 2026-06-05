@@ -1,0 +1,10 @@
+# Block deps from untrusted sources, e.g. git repos or tarballs)
+blockExoticSubdeps: true
+# Forbid packages that are < 1 week old
+minimumReleaseAge: 10080
+# Fail if no version satisfies minimumReleaseAge instead of just installing some version anyway
+minimumReleaseAgeStrict: true
+# Forbid removal e.g. of provenance
+trustPolicy: no-downgrade
+# Check minimumReleaseAge and trustPolicy even for versions specified in the lockfile
+trustLockfile: false

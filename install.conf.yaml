@@ -35,6 +35,8 @@
     ~/.dircolors: dircolors
     # ~/.config/Code/User/settings.json: vscode/settings.json
     # ~/.config/Code/User/keybindings.json: vscode/keybindings.json
+    ~/Library/Preferences/pnpm: pnpm
+    ~/.config/pnpm: pnpm
 
 - shell:
     - echo "You should install the recommended powerlevel10k font from https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k! "
