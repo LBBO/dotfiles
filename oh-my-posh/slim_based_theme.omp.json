@@ -61,6 +61,7 @@
           "style": "powerline"
         },
         {
+          "type": "path",
           "properties": {
             "cache_duration": "none",
             "folder_icon": " <#B5B2C2>\ue5fe </>",
@@ -69,8 +70,14 @@
           "foreground": "#fafafa",
           "powerline_symbol": "\ue0b0",
           "background": "#0037DA",
-          "type": "path",
-          "style": "powerline"
+          "style": "powerline",
+          "options": {
+            "mapped_locations": {
+              "~/git-clones/local": " / \udb80\udf79 ",
+              "~/git-clones/GitLab": " / \ue7eb ",
+              "~/git-clones/GitHub": " / \ue709 "
+            }
+          }
         },
         {
           "properties": {
