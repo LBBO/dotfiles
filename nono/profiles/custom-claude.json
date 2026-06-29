@@ -1,0 +1,19 @@
+{
+  "$schema": "../profile-schema.json",
+  "extends": "claude-code",
+  "meta": {
+    "name": "custom-claude"
+  },
+  "groups": {
+    "include": []
+  },
+  "workdir": {
+    "access": "readwrite"
+  },
+  "filesystem": {
+    "allow": [
+      "~/git-clones/GitHub/dotfiles/claude"
+    ],
+    "read": []
+  }
+}
