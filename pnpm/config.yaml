@@ -6,5 +6,3 @@ minimumReleaseAge: 10080
 minimumReleaseAgeStrict: true
 # Forbid removal e.g. of provenance
 trustPolicy: no-downgrade
-# Check minimumReleaseAge and trustPolicy even for versions specified in the lockfile
-trustLockfile: false
