@@ -38,7 +38,9 @@
     # ~/.config/Code/User/keybindings.json: vscode/keybindings.json
     ~/Library/Preferences/pnpm: pnpm
     ~/.config/pnpm: pnpm
-    ~/.claude/settings.json: claude/settings.json
+    ~/.config/uv: uv
+    ~/.claude/settings.json:
+      path: claude/settings.json
     ~/.claude/statusline.js: claude/statusline.js
 
 - shell:
