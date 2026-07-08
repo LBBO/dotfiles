@@ -1,11 +1,14 @@
 {
   "$schema": "../profile-schema.json",
-  "extends": "claude-code",
+  "extends": [
+    "claude-code"
+  ],
   "meta": {
     "name": "custom-claude"
   },
   "groups": {
-    "include": []
+    "include": [],
+    "exclude": []
   },
   "workdir": {
     "access": "readwrite"
@@ -14,6 +17,28 @@
     "allow": [
       "~/git-clones/GitHub/dotfiles/claude"
     ],
-    "read": []
+    "read": [
+      "~/.local/state/mise",
+      "~/.local/share/mise",
+      "~/Library/Preferences/pnpm/config.yaml"
+    ],
+    "read_file": [
+      "~/.CFUserTextEncoding"
+    ],
+    "suppress_save_prompt": [
+      "~/Library/Application Support/Arc/User Data",
+      "~/Library/Application Support/BraveSoftware/Brave-Browser",
+      "~/Library/Application Support/Chromium",
+      "~/Library/Application Support/Google/Chrome",
+      "~/Library/Application Support/Vivaldi"
+    ]
+  },
+  "environment": {
+    "allow_vars": [
+      "CLAUDE_CONFIG_DIR"
+    ],
+    "set_vars": {
+      "TERM": "xterm-256color"
+    }
   }
 }
