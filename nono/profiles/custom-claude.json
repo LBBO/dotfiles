@@ -15,7 +15,9 @@
   },
   "filesystem": {
     "allow": [
-      "~/git-clones/GitHub/dotfiles/claude"
+      "~/git-clones/GitHub/dotfiles/claude",
+      "~/.agents",
+      "~/.cache/uv"
     ],
     "read": [
       "~/.local/state/mise",

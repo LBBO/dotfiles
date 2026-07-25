@@ -41,6 +41,8 @@
     ~/.config/uv: uv
     ~/.claude/settings.json:
       path: claude/settings.json
+    ~/.claude/hooks:
+      path: claude/hooks
     ~/.claude/statusline.js: claude/statusline.js
     ~/.config/herdr/config.toml:
       path: herdr/config.toml
